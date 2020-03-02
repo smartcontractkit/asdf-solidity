@@ -33,21 +33,17 @@ install_from_source () {
   fi
 
   cd $dirname \
-
-    # Install dependencies
+    `# Install dependencies` \
     && sh ./scripts/install_deps.sh \
-
-    # Build solc
+    `# Build solc` \
     && mkdir build \
     && cd build \
     && cmake .. \
     && make \
-
-    # Install the compiled solc
+    `# Install the compiled solc` \
     && mkdir $download_dir/bin \
     && cp solc/solc $download_dir/bin/ \
-
-    # Remove temporary files
+    `# Remove temporary files` \
     && cd $download_dir \
     && rm -rf $dirname \
     && rm $filename
@@ -61,14 +57,14 @@ install_static () {
   local download_dir=$2
 
   local base_url=https://github.com/ethereum/solidity/releases/download/
-  local filename=solc_static_linux
+  local filename=solc-static-linux
   local suffix=v$version/$filename
   local release_url=$base_url$suffix
 
   # Download and install solc
-  mkdir bin \
+  mkdir $download_dir/bin \
     && wget -O $download_dir/bin/solc $release_url
-  
+  chmod +x $download_dir/bin/solc
 }
 
 case $(uname -s) in
