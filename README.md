@@ -6,7 +6,7 @@ Solidity plugin for asdf version manager
 
 ## Install
 
-`asdf plugin-add solidity https://github.com/refillic/asdf-solidity.git`
+`asdf plugin-add solidity https://github.com/smartcontractkit/asdf-solidity.git`
 
 ## Requirements
 
