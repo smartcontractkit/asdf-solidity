@@ -1,5 +1,6 @@
 # asdf-solidity
 
+![CI](https://github.com/smartcontractkit/asdf-solidity/workflows/CI/badge.svg)
 ![Supports Linux and macOS](https://img.shields.io/badge/platforms-linux%20%7C%20macOS-blue.svg)
 
 Solidity plugin for asdf version manager
